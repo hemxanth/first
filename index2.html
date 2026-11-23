@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theme Toggle</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    body.light {
+      background-color: #ffffff;
+      color: #222222;
+    }
+
+    body.dark {
+      background-color: #1e1e1e;
+      color: #f5f5f5;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="light">
+  <h1>Hello, World!</h1>
+  <button id="themeToggle">Switch to Dark Mode</button>
+
+  <script>
+    const body = document.body;
+    const toggleButton = document.getElementById("themeToggle");
+
+    toggleButton.addEventListener("click", () => {
+      if (body.classList.contains("light")) {
+        body.classList.replace("light", "dark");
+        toggleButton.textContent = "Switch to Light Mode";
+      } else {
+        body.classList.replace("dark", "light");
+        toggleButton.textContent = "Switch to Dark Mode";
+      }
+    });
+  </script>
+</body>
+</html>

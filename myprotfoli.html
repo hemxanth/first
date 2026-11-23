@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="script.js"></script>
+<title>Hemanth | Personal Portfolio</title>
+
+<meta name="description" content="Welcome to Hemanth's personal portfolio. Discover my skills, projects, education and achievements.">
+
+<style>
+
+/* =========================
+   HEMANTH PORTFOLIO
+   PREMIUM WHITE & BLUE
+========================= */
+
+:root {
+    --blue: #2563eb;
+    --light-blue: #eff6ff;
+    --dark: #10213e;
+    --text: #64748b;
+    --white: #ffffff;
+    --border: #dbeafe;
+    --shadow: 0 10px 35px rgba(37,99,235,0.09);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: var(--dark);
+    background: white;
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 88%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 0;
+    scroll-margin-top: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 37px;
+    margin-bottom: 10px;
+}
+
+.section-title span {
+    color: var(--blue);
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 45px;
+}
+
+/* NAVBAR */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 900;
+    color: var(--blue);
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--dark);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 650;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: var(--blue);
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+/* HERO */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    background:
+    radial-gradient(circle at 85% 30%, #dbeafe, transparent 35%),
+    linear-gradient(120deg, #ffffff, #f0f7ff);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.welcome {
+    display: inline-block;
+    background: #dbeafe;
+    color: var(--blue);
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 7vw, 72px);
+    line-height: 1.12;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: var(--blue);
+}
+
+.hero h2 {
+    color: var(--blue);
+    font-size: 25px;
+    margin-bottom: 18px;
+    min-height: 40px;
+}
+
+.hero p {
+    color: var(--text);
+    font-size: 17px;
+    max-width: 560px;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    padding: 13px 25px;
+    border: 2px solid var(--blue);
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #1749b5;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--blue);
+}
+
+.btn-outline:hover {
+    color: white;
+}
+
+.profile-area {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-border {
+    width: 310px;
+    height: 310px;
+    padding: 9px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2563eb, #38bdf8);
+    box-shadow: 0 20px 60px #2563eb35;
+    animation: floating 4s ease-in-out infinite;
+}
+
+.profile-border img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+@keyframes floating {
+    0%,100% {transform:translateY(0)}
+    50% {transform:translateY(-15px)}
+}
+
+/* ABOUT */
+
+.about {
+    background: white;
+}
+
+.about-content {
+    max-width: 850px;
+    text-align: center;
+    margin: auto;
+}
+
+.about-content p {
+    color: var(--text);
+    font-size: 17px;
+}
+
+.about-details {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 35px;
+}
+
+.detail-card {
+    background: var(--light-blue);
+    padding: 25px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.detail-card h3 {
+    color: var(--blue);
+    font-size: 25px;
+}
+
+/* SKILLS */
+
+.skills {
+    background: #f5f9ff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    border: 1px solid var(--border);
+    padding: 27px 15px;
+    border-radius: 13px;
+    text-align: center;
+    transition: .3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--blue);
+    box-shadow: var(--shadow);
+}
+
+.skill-icon {
+    font-size: 38px;
+}
+
+.skill-card h3 {
+    margin-top: 10px;
+}
+
+/* PROJECTS */
+
+.projects {
+    background: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow);
+}
+
+.project-image {
+    height: 180px;
+    display: grid;
+    place-items: center;
+    font-size: 65px;
+    background: linear-gradient(135deg,#dbeafe,#bfdbfe);
+}
+
+.project-info {
+    padding: 24px;
+}
+
+.project-info p {
+    color: var(--text);
+    font-size: 14px;
+    margin: 10px 0 15px;
+}
+
+.project-link {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+/* EDUCATION */
+
+.education {
+    background: #f5f9ff;
+}
+
+.education-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-left: 5px solid var(--blue);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.education-card h3 {
+    color: var(--blue);
+}
+
+.education-card p {
+    color: var(--text);
+}
+
+/* CERTIFICATES */
+
+.certificate {
+    text-align: center;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 30px 15px;
+    transition: .3s;
+}
+
+.certificate:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow);
+}
+
+.certificate div {
+    font-size: 42px;
+}
+
+/* ACHIEVEMENTS */
+
+.achievements {
+    background: var(--light-blue);
+}
+
+.counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+
+.counter-card {
+    background: white;
+    padding: 28px 15px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+.counter-card h3 {
+    color: var(--blue);
+    font-size: 35px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: white;
+}
+
+.contact-form {
+    max-width: 650px;
+    margin: auto;
+    background: var(--light-blue);
+    border: 1px solid var(--border);
+    padding: 32px;
+    border-radius: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    border: 1px solid #d5e1f1;
+    background: white;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--blue);
+}
+
+.contact-form textarea {
+    height: 140px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+#formStatus {
+    color: var(--blue);
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* FOOTER */
+
+footer {
+    background: #10213e;
+    color: white;
+    text-align: center;
+    padding: 35px 15px;
+}
+
+footer h2 {
+    color: #60a5fa;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 18px 0;
+}
+
+.social-links a {
+    color: #93c5fd;
+}
+
+footer p {
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+/* REVEAL ANIMATION */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* BACK TO TOP */
+
+.top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--blue);
+    color: white;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+    z-index: 500;
+    box-shadow: var(--shadow);
+}
+
+.top-btn.show {
+    display: block;
+}
+
+/* MOBILE RESPONSIVE */
+
+@media(max-width:850px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 65px 0;
+    }
+
+    .profile-area {
+        grid-row: 1;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .profile-border {
+        width: 250px;
+        height: 250px;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .counter-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:650px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        padding: 25px 7%;
+        background: white;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .project-grid,
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+
+    section {
+        padding: 70px 0;
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    *,*::before,*::after {
+        scroll-behavior:auto !important;
+        animation:none !important;
+        transition:none !important;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+<div class="container navbar">
+
+    <a href="#home" class="logo">
+        HEMANTH<span>.</span>
+    </a>
+
+    <button class="menu-btn"
+            id="menuBtn"
+            aria-label="Toggle navigation"
+            aria-expanded="false">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="container hero-content">
+
+    <div class="reveal">
+
+        <span class="welcome">
+            WELCOME TO MY PORTFOLIO 👋
+        </span>
+
+        <h1>
+            Hi, I'm <span>Hemanth</span>
+        </h1>
+
+        <h2 id="typingText">
+            Student & Future Professional
+        </h2>
+
+        <p>
+            I am Hemanth, a passionate student and
+            technology enthusiast. I love learning
+            new skills, exploring creative ideas and
+            building amazing digital experiences.
+            Welcome to my personal portfolio!
+        </p>
+
+        <div class="buttons">
+
+            <a href="#projects" class="btn">
+                Explore My Work →
+            </a>
+
+            <a href="hemanth-cv.pdf"
+               download="Hemanth-CV.pdf"
+               class="btn btn-outline">
+                Download My CV ↓
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="profile-area">
+
+        <div class="profile-border">
+            <img src="hemanth.jpg"
+                 alt="Hemanth profile photo"
+                 onerror="this.src='https://placehold.co/400x400/eaf2ff/2563eb?text=HEMANTH'">
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        About <span>Me</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        Get to know more about Hemanth
+    </p>
+
+    <div class="about-content reveal">
+
+        <p>
+            Hello! My name is Hemanth. I am a student
+            who is passionate about technology,
+            programming and innovation.
+
+            I enjoy discovering new things, improving
+            my knowledge and developing practical
+            projects. My goal is to become a skilled
+            professional and create something useful
+            for the world.
+
+            I believe that every day is a new opportunity
+            to learn, grow and achieve something great.
+        </p>
+
+        <div class="about-details">
+
+            <div class="detail-card">
+                <h3>01+</h3>
+                <p>Learning Journey</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>100%</h3>
+                <p>Dedication</p>
+            </div>
+
+            <div class="detail-card">
+                <h3>Future</h3>
+                <p>Career Focused</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills" class="skills">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        My <span>Skills</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        Technologies and abilities I am developing
+    </p>
+
+    <div class="skills-grid">
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">🌐</div>
+            <h3>HTML5</h3>
+        </div>
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">🎨</div>
+            <h3>CSS3</h3>
+        </div>
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">⚡</div>
+            <h3>JavaScript</h3>
+        </div>
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">🐍</div>
+            <h3>Python</h3>
+        </div>
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">💻</div>
+            <h3>Programming</h3>
+        </div>
+
+        <div class="skill-card reveal">
+            <div class="skill-icon">🧠</div>
+            <h3>Problem Solving</h3>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects" class="projects">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        My <span>Projects</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        Some of my creative work and practice projects
+    </p>
+
+    <div class="project-grid">
+
+        <div class="project-card reveal">
+            <div class="project-image">🌐</div>
+            <div class="project-info">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    My own responsive portfolio website
+                    created using HTML, CSS and JavaScript.
+                </p>
+                <a href="#home" class="project-link">
+                    Explore →
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card reveal">
+            <div class="project-image">🛒</div>
+            <div class="project-info">
+                <h3>Shopping Website</h3>
+                <p>
+                    A modern e-commerce website concept
+                    with attractive product cards.
+                </p>
+                <a href="#contact" class="project-link">
+                    Explore →
+                </a>
+            </div>
+        </div>
+
+        <div class="project-card reveal">
+            <div class="project-image">🧮</div>
+            <div class="project-info">
+                <h3>Calculator App</h3>
+                <p>
+                    A simple calculator project
+                    to practise JavaScript programming.
+                </p>
+                <a href="#contact" class="project-link">
+                    Explore →
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- EDUCATION -->
+
+<section id="education" class="education">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        My <span>Education</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        My academic journey
+    </p>
+
+    <div class="education-card reveal">
+
+        <h3>Your Course / Degree Name</h3>
+
+        <p>Your College / School Name</p>
+
+        <p>2024 - Present</p>
+
+        <br>
+
+        <p>
+            Currently studying and developing
+            academic knowledge, technical abilities
+            and practical experience.
+        </p>
+
+    </div>
+
+</div>
+</section>
+
+<!-- CERTIFICATES -->
+
+<section id="certificates">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        My <span>Certificates</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        My learning and certifications
+    </p>
+
+    <div class="project-grid">
+
+        <div class="certificate reveal">
+            <div>🏆</div>
+            <h3>HTML Certificate</h3>
+            <p>Web Development</p>
+        </div>
+
+        <div class="certificate reveal">
+            <div>🎓</div>
+            <h3>Python Certificate</h3>
+            <p>Programming</p>
+        </div>
+
+        <div class="certificate reveal">
+            <div>💻</div>
+            <h3>Technology Certificate</h3>
+            <p>Technical Learning</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- ACHIEVEMENTS -->
+
+<section class="achievements">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        My <span>Achievements</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        My learning progress
+    </p>
+
+    <div class="counter-grid">
+
+        <div class="counter-card reveal">
+            <h3 class="counter" data-target="5">0</h3>
+            <p>Projects</p>
+        </div>
+
+        <div class="counter-card reveal">
+            <h3 class="counter" data-target="10">0</h3>
+            <p>Skills</p>
+        </div>
+
+        <div class="counter-card reveal">
+            <h3 class="counter" data-target="3">0</h3>
+            <p>Certificates</p>
+        </div>
+
+        <div class="counter-card reveal">
+            <h3 class="counter" data-target="100">0</h3>
+            <p>Learning Passion %</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+<div class="container">
+
+    <h2 class="section-title reveal">
+        Contact <span>Me</span>
+    </h2>
+
+    <p class="section-subtitle reveal">
+        Let's connect and create something amazing!
+    </p>
+
+    <!-- Replace YOUR_EMAIL with your email address -->
+    <form class="contact-form reveal"
+          id="contactForm"
+          action="https://formsubmit.co/YOUR_EMAIL"
+          method="POST">
+
+        <input type="text"
+               name="name"
+               placeholder="Your Name"
+               required>
+
+        <input type="email"
+               name="email"
+               placeholder="Your Email"
+               required>
+
+        <input type="text"
+               name="_subject"
+               placeholder="Subject"
+               required>
+
+        <textarea name="message"
+                  placeholder="Write your message..."
+                  required></textarea>
+
+        <input type="hidden"
+               name="_captcha"
+               value="true">
+
+        <button type="submit" class="btn">
+            Send Message →
+        </button>
+
+        <p id="formStatus">
+            Send me a message. I would love to hear from you!
+        </p>
+
+    </form>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h2>HEMANTH.</h2>
+
+    <div class="social-links">
+
+        <a href="https://github.com/"
+           target="_blank"
+           rel="noopener noreferrer">GitHub</a>
+
+        <a href="https://linkedin.com/"
+           target="_blank"
+           rel="noopener noreferrer">LinkedIn</a>
+
+        <a href="https://instagram.com/"
+           target="_blank"
+           rel="noopener noreferrer">Instagram</a>
+
+    </div>
+
+    <p id="copyright">
+        © 2026 Hemanth. All Rights Reserved.
+    </p>
+
+    <p>Designed with ❤️ by Hemanth</p>
+
+</footer>
+
+<button class="top-btn"
+        id="topBtn"
+        aria-label="Back to top">
+    ↑
+</button>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+
+    const open = navLinks.classList.toggle("active");
+
+    menuBtn.textContent = open ? "✕" : "☰";
+
+    menuBtn.setAttribute("aria-expanded", open);
+
+});
+
+document.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+        menuBtn.textContent = "☰";
+
+        menuBtn.setAttribute("aria-expanded", "false");
+
+    });
+
+});
+
+/* =========================
+   TYPING ANIMATION
+========================= */
+
+const roles = [
+    "Student & Learner",
+    "Future Professional",
+    "Technology Enthusiast",
+    "Creative Thinker",
+    "Future Developer"
+];
+
+let roleIndex = 0;
+let character = 0;
+let deleting = false;
+
+const typingText = document.getElementById("typingText");
+
+function typeAnimation() {
+
+    const current = roles[roleIndex];
+
+    if (deleting) {
+        character--;
+    } else {
+        character++;
+    }
+
+    typingText.textContent =
+        current.substring(0, character);
+
+    let delay = deleting ? 45 : 85;
+
+    if (!deleting && character === current.length) {
+
+        deleting = true;
+        delay = 1300;
+
+    } else if (deleting && character === 0) {
+
+        deleting = false;
+
+        roleIndex = (roleIndex + 1) % roles.length;
+
+        delay = 400;
+
+    }
+
+    setTimeout(typeAnimation, delay);
+
+}
+
+if (!window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+).matches) {
+
+    typeAnimation();
+
+}
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("show");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    { threshold: 0.12 }
+);
+
+document.querySelectorAll(".reveal")
+.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+/* =========================
+   ACHIEVEMENT COUNTERS
+========================= */
+
+const counters = document.querySelectorAll(".counter");
+
+const counterObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+
+                const target = Number(
+                    counter.dataset.target
+                );
+
+                let current = 0;
+
+                const increment = Math.max(
+                    1, Math.ceil(target / 60)
+                );
+
+                function updateCounter() {
+
+                    current = Math.min(
+                        current + increment,
+                        target
+                    );
+
+                    counter.textContent = current;
+
+                    if (current < target) {
+
+                        requestAnimationFrame(updateCounter);
+
+                    }
+
+                }
+
+                updateCounter();
+
+                observer.unobserve(counter);
+
+            }
+
+        });
+
+    },
+    { threshold: 0.5 }
+);
+
+counters.forEach(counter => {
+
+    counterObserver.observe(counter);
+
+});
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const topBtn = document.getElementById("topBtn");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 350) {
+
+        topBtn.classList.add("show");
+
+    } else {
+
+        topBtn.classList.remove("show");
+
+    }
+
+});
+
+topBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+/* =========================
+   CONTACT FORM FEEDBACK
+========================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+const formStatus =
+    document.getElementById("formStatus");
+
+contactForm.addEventListener("submit", () => {
+
+    formStatus.textContent =
+        "Submitting your message...";
+
+});
+
+/* =========================
+   AUTOMATIC COPYRIGHT YEAR
+========================= */
+
+document.getElementById("copyright").textContent =
+    "© " + new Date().getFullYear() +
+    " Hemanth. All Rights Reserved.";
+
+</script>
+
+</body>
+</html>
